@@ -18,7 +18,7 @@ phases:
   post_build:
     commands:
       - echo "Uploading artifact to S3..."
-      - aws s3 cp my-node-app.zip s3://my-deployment-artifacts-bucket/
+      - aws s3 cp my-node-app.zip s3://my-deployment-artifacts-bucket321/
 
 artifacts:
   files:
