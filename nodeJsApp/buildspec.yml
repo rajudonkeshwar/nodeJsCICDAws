@@ -5,6 +5,8 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo "Changing to nodeJsApp/"
+      - cd nodeJsApp/
       - echo "Installing dependencies..."
       - npm install
 
