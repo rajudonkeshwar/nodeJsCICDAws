@@ -1,14 +1,16 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-const hostname = '0.0.0.0'; // Listen on all available network interfaces
-const port = 3000;
+// Middleware
+app.use(express.json());
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World from Node.js on EC2!\n');
+// Route
+app.get('/', (req, res) => {
+  res.send('Hello from Node.js Application! Deployed successfully 🚀');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
