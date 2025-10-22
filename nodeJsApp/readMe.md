@@ -5,11 +5,8 @@ ChatGPT said:
 Perfect! Since you already have your artifact in S3, we can deploy it to your EC2 instance using AWS CodeDeploy directly. I’ll give you a step-by-step procedure.
 
 Step 0: Prerequisites
-
 EC2 instance
-
 Running Amazon Linux 2
-
 CodeDeploy agent installed and running:
 
 sudo yum update -y
@@ -20,14 +17,11 @@ chmod +x ./install
 sudo ./install auto
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
-
-
 Replace <region> with your AWS region.
 
+
 EC2 instance IAM role
-
 Must have AmazonEC2RoleforAWSCodeDeploy attached.
-
 Example policy allows CodeDeploy agent to access S3 and CloudWatch.
 
 S3 bucket
