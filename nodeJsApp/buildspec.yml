@@ -20,7 +20,7 @@ phases:
       - echo "Uploading artifact to S3..."
       - aws s3 cp my-node-app.zip s3://my-deployment-artifacts-bucket321/
 
-artifacts:
-  files:
-    - my-node-app.zip
-  discard-paths: yes
+# artifacts:
+#   files:
+#     - my-node-app.zip
+#   discard-paths: yes
