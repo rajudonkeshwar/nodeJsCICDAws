@@ -13,14 +13,15 @@ phases:
   build:
     commands:
       - echo "Building artifact..."
-      - zip -r my-node-app.zip app.js package.json node_modules appspec.yml scripts
+      - npm run build
+      - zip -r my-node-app.zip dist appspec.yml scripts
 
   post_build:
     commands:
       - echo "Uploading artifact to S3..."
       - aws s3 cp my-node-app.zip s3://my-deployment-artifacts-bucket321/
 
-# artifacts:
-#   files:
-#     - my-node-app.zip
-#   discard-paths: yes
+artifacts:
+  files:
+    - my-node-app.zip
+  discard-paths: yes
