@@ -14,7 +14,7 @@ phases:
     commands:
       - echo "Building artifact..."
       - npm run build
-      - zip -r my-node-app.zip dist appspec.yml scripts
+      - zip -r my-node-app.zip package.json app.js appspec.yml scripts
 
   post_build:
     commands:
