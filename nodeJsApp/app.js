@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Route
 app.get('/', (req, res) => {
-  res.send('Hello from Node.js Application! Deployed successfully 🚀');
+  res.send('Hello i am from Node.js in green deployment Application! Deployed successfully 🚀');
 });
 
 // Start server
